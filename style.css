@@ -11,7 +11,7 @@ body, h1, h2, h3, p, ul {
 body {
     font-family: 'Gruppo', sans-serif; 
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #000000;
 }
 
@@ -50,7 +50,7 @@ section {
 
 footer {
     background-color: #000000;
-    color: #fff;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
     bottom: 0;
@@ -81,4 +81,18 @@ footer {
 .images{
     display: flex;
     float: right;
+}
+
+
+#icons-container {
+    float: right; 
+  
+}
+
+.icon {
+    margin-left: 15x; /* Abstand  Icons */
+    margin-right: 15px;
+    
+    width: 40px;
+    height: auto;
 }

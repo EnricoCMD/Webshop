@@ -7,28 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <section id="werbung"> JETZT 50% AUF ALLES</section>
+    <style>
+    #werbung{
+        font-size: 5ch;
+        color: red;
+        text-align: center;
+        font-weight: bolder;
+       background-color: rgb(158, 158, 158);
+    }    
+    </style>
     <header>
-        <h1>Emenras Kleidungsshop</h1>
-        <br>
-        <h1 id="welcome-message">Willkommen, Gast</h1> <!-- Hier wird der Willkommensgruß angezeigt -->
-        <nav>
-            <ul>
-                <a href="tshirts.html">T-Shirts</a>
-                <a href="Pullover.html">Pullover</a>
-                <a href="Hosen.html">Hosen</a>
-                <div class="images">
-                    <img src="Icons\male-icon.png" alt="person" class="person">
-                    <img src="Icons\cart-line-icon.png" alt="cart" class="cart"> 
-                </div>
-            </ul>
-        </nav>
+        <section id="Uberschrift"><h1>Emenras Kleidungsshop
+            <div id="icons-container">
+            <img src="Icons\cart-line-icon.png" alt="Icon 1" class="icon">
+            <img src="Icons\male-icon.png" alt="Icon 2" class="icon">
+        </div>
+    </h1>
+</section> 
         
-    </header>
-    <main>
-        <!-- Benutzer Login -->
+        
+        <style>
+            #Uberschrift{
+                text-align: center;
+                font-size: 1cm;
+                color: rgb(0, 0, 0);
+                letter-spacing: 0,2cm;
+                background-color: rgb(186, 220, 236);
+            }
+        </style>
+       
+        <h1 id="welcome-message">Willkommen, Gast</h1> <!-- Hier wird der Willkommensgruß angezeigt -->
+       <style>#user-login{
+        float: left;}
+    </style>
         <section id="user-login">
-            <h2>Benutzer Login</h2>
+            <h2>Benutzer Login</h2> 
             <form action="user_login.php" method="post">
                 E-Mail:<br>
                 <input type="email" name="email"><br><br>
@@ -38,8 +52,20 @@
             </form>
             <a href="register.php">Noch keinen Account? Hier registrieren</a>
         </section>
-
-        <!-- Administrator Login -->
+        
+        <nav>
+            <ul>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="Pullover.html">Pullover</a>
+                <a href="Hosen.html">Hosen</a>
+                <div class="images">
+                    
+                </div>
+            </ul>
+        </nav>
+    </header>
+   
+    <main>
         <section id="admin-login">
             <h2>Admin Login</h2>
             <form action="admin_login.php" method="post">
@@ -50,16 +76,11 @@
                 <input type="submit" value="Login" name="admin_login">
             </form>
         </section>
-    </main>
 
-    
-    <main>
         <section id="home">
             <h2>Home</h2>
             <p>...</p>
         </section>
-        
-       
         
         <section id="Produkte">
             <h2>Produkte</h2>
@@ -82,12 +103,6 @@
             })
             .catch(error => console.error('Error fetching username:', error));
     </script>
-     <script src="script.js"></script> 
+    <script src="script.js"></script> 
 </body>
 </html>
-
-
-
-
-
-
