@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webshop Emenra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Emenras Kleidungsshop</h1>
+        <br>
+        <h1 id="welcome-message">Willkommen, Gast</h1> <!-- Hier wird der Willkommensgruß angezeigt -->
+        <nav>
+            <ul>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="Pullover.html">Pullover</a>
+                <a href="Hosen.html">Hosen</a>
+                <div class="images">
+                    <img src="Icons\male-icon.png" alt="person" class="person">
+                    <img src="Icons\cart-line-icon.png" alt="cart" class="cart"> 
+                </div>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <!-- Benutzer Login -->
+        <section id="user-login">
+            <h2>Benutzer Login</h2>
+            <form action="user_login.php" method="post">
+                E-Mail:<br>
+                <input type="email" name="email"><br><br>
+                Passwort:<br>
+                <input type="password" name="password"><br><br>
+                <input type="submit" value="Login" name="user_login">
+            </form>
+            <a href="register.php">Noch keinen Account? Hier registrieren</a>
+        </section>
+
+        <!-- Administrator Login -->
+        <section id="admin-login">
+            <h2>Admin Login</h2>
+            <form action="admin_login.php" method="post">
+                Benutzername:<br>
+                <input type="text" name="username"><br><br>
+                Passwort:<br>
+                <input type="password" name="password"><br><br>
+                <input type="submit" value="Login" name="admin_login">
+            </form>
+        </section>
+    </main>
+
+    
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>...</p>
+        </section>
+        
+       
+        
+        <section id="Produkte">
+            <h2>Produkte</h2>
+            <p>...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Emenra. All rights reserved.</p>
+    </footer>
+    <script>
+        // Benutzernamen aus der PHP-Datei abrufen
+        fetch('get_username.php')
+            .then(response => response.text())
+            .then(username => {
+                // Wenn der Benutzername 'Kein Benutzer gefunden' ist, wird 'Gast' angezeigt, sonst der tatsächliche Benutzername
+                const welcomeMessage = (username === 'Kein Benutzer gefunden') ? 'Gast' : username;
+                // Benutzernamen in das HTML-Element einfügen
+                document.getElementById('welcome-message').textContent = 'Willkommen, ' + welcomeMessage;
+            })
+            .catch(error => console.error('Error fetching username:', error));
+    </script>
+     <script src="script.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
