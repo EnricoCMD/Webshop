@@ -43,44 +43,78 @@
         </style>
        
         <h1 id="welcome-message">Willkommen, Gast</h1> <!-- Hier wird der Willkommensgruß angezeigt -->
-       <style>#user-login{
-        float: left;}
-    </style>
+
        <section id="links">
         <a href="tshirts.html">T-Shirts</a>
                 <a href="Pullover.html">Pullover</a>
                 <a href="Hosen.html">Hosen</a>
        </section>
+    
        <style>
         #links{
             text-align: center;
             font-size: 20px;
             
         }
-
        </style>
-    
-    
-    <section id="user-login">
-            <h2>Benutzer Login</h2> 
-            <form action="user_login.php" method="post">
-                E-Mail:<br>
-                <input type="email" name="email"><br><br>
-                Passwort:<br>
-                <input type="password" name="password"><br><br>
-                <input type="submit" value="Login" name="user_login">
-            </form>
-            <a href="register.php">Noch keinen Account? Hier registrieren</a>
+
+       <main>
+        <!-- Vorschau der Produkte -->
+        <section id="Produkte" style="display: flex; justify-content: space-between;">
+            <section id="tshirts" class="product">
+                <h3>T-Shirts</h3>
+                <div class="overlay">
+                    <span>Mehr Produkte</span>
+                </div>
+                <img src="Produkt_Fotos\—Pngtree—black t shirt mockup hanging_13020093.png" alt="blackshirt" class="bshirt" width="400">
+            </section>
+            <section id="pullover" class="product">
+                <h3>Pullover</h3>
+                <div class="overlay">
+                    <span>Mehr Produkte</span>
+                </div>
+                <img src="Produkt_Fotos\pullovergrey.png" alt="pullovergrey" class="grpullover" width="400">
+            </section>
+            <section id="hosen" class="product">
+                <h3>Hosen</h3>
+                <div class="overlay">
+                    <span>Mehr Produkte</span>
+                </div>
+                <img src="Produkt_Fotos\jeans.jpg" alt="jeans" class="jeans" width="400">
+            </section>
         </section>
-        
-       
-           
-                
-          
-    </header>
-   
-    <main>
-        <section id="admin-login">
+    </main>
+    
+    
+    <style>#Produkte
+        {
+            text-align: left;
+            font-size: 30px;
+        }
+    </style>
+    <!--  <section id="user-login">
+        <h2>Benutzer Login</h2> 
+        <form action="user_login.php" method="post">
+            E-Mail:<br>
+            <input type="email" name="email"><br><br>
+            Passwort:<br>
+            <input type="password" name="password"><br><br>
+            <input type="submit" value="Login" name="user_login">
+        </form>
+        <a href="register.php">Noch keinen Account? Hier registrieren</a>
+    </section>
+
+
+    <style>
+        #user-login{
+            float: left;
+        }
+    </style> -->
+     
+</header>
+
+    
+     <!--<section id="admin-login">
             <h2>Admin Login</h2>
             <form action="admin_login.php" method="post">
                 Benutzername:<br>
@@ -90,17 +124,14 @@
                 <input type="submit" value="Login" name="admin_login">
             </form>
         </section>
+        <style>
+            #admin-login {
+                float: left;
+            }
+        </style> -->   
 
-        <section id="home">
-            <h2>Home</h2>
-            <p>...</p>
-        </section>
-        
-        <section id="Produkte">
-            <h2>Produkte</h2>
-            <p>...</p>
-        </section>
-    </main>
+   
+   
 
     <footer>
         <p>&copy; 2024 Emenra. All rights reserved.</p>

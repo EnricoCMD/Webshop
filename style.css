@@ -90,3 +90,52 @@ footer {
 a {
     color: red;
 }
+
+
+.bshirt:hover {
+    opacity: 0.5; /* Beim Hover-Effekt die Opazität ändern */
+}
+
+.grpullover:hover {
+    opacity: 0.5; /* Beim Hover-Effekt die Opazität ändern */
+}
+
+.jeans:hover {
+    opacity: 0.5; /* Beim Hover-Effekt die Opazität ändern */
+}
+
+.product {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2.5s ease, transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Schwarze Hintergrundfarbe mit Transparenz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Anfangs unsichtbar machen */
+    transition: opacity 0.3s ease; /* Übergangseffekt für die Opazität */
+}
+
+.product:hover .overlay {
+    opacity: 1; /* Beim Hover sichtbar machen */
+}
+
+.overlay span {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+.product.active {
+    opacity: 1;
+    transform: translateY(0);
+}
