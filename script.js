@@ -1,23 +1,24 @@
-// person click event
-document.querySelector('.person').addEventListener('click', function() {
+// person click event auf andere seite // SELECTOR MUSS DURCH DIE AKTUELLE KLASSE ERSETZT WERDEN
+document.querySelector('.icon person').addEventListener('click', function() {
     window.location.href = 'profile.html';
 });
 
-document.querySelector('.cart').addEventListener('click', function() {
+document.querySelector('.icon cart').addEventListener('click', function() {
     window.location.href = 'Warenkorb.html';
 });
-
-// Selektiere das Element
-const werbung = document.getElementById('werbung');
-
-// Füge den Eventlistener hinzu
-werbung.addEventListener('mouseenter', function() {
-    // Ändere die Hintergrundfarbe auf Schwarz
-    this.style.backgroundColor = 'black';
+document.querySelector('.icon heart').addEventListener('click', function() {
+    window.location.href = 'Favoriten.html';
 });
 
-// Füge den Eventlistener hinzu, um die ursprüngliche Hintergrundfarbe wiederherzustellen
-werbung.addEventListener('mouseleave', function() {
-    // Ändere die Hintergrundfarbe auf Transparent
-    this.style.backgroundColor = 'rgb(158, 158, 158)';
-});
+
+// Das Script ändert die Schriftfarbe des Textes im Intervall von 1 Sekunde zwischen Rot und Schwarz.
+setInterval(function() {
+    var werbung = document.getElementById('werbung');
+    var currentColor = window.getComputedStyle(werbung).color;
+    if (currentColor === 'rgb(255, 0, 0);') {
+        werbung.style.color = 'rgb(0, 0, 0)';
+    } else {
+        werbung.style.color = 'rgb(255, 0, 0)';
+    }
+}, 1000); // 1000 Millisekunden = 1 Sekunde
+

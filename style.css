@@ -58,22 +58,8 @@ footer {
     width: 100%;
 }
 
-.person{
-    width: 50px; /*breite*/
-    height: auto;
-    float: right; 
-}
-.person:hover {
-    opacity: 0.5; /* Beim Hover-Effekt die Opazität ändern */
-}
 
-.cart{
-    width: 50px; /*breite*/
-    height: auto;
-    float: right; 
-  
-}
-.cart:hover {
+.icon:hover {
     opacity: 0.5; /* Beim Hover-Effekt die Opazität ändern */
 }
 
@@ -92,7 +78,15 @@ footer {
 .icon {
     margin-left: 15x; /* Abstand  Icons */
     margin-right: 15px;
-    
     width: 40px;
     height: auto;
+    cursor: pointer;
+}
+.icon:nth-child(1):hover {
+    filter: invert(26%) sepia(92%) saturate(6492%) hue-rotate(349deg) brightness(91%) contrast(93%);
+    
+}
+
+a {
+    color: red;
 }
