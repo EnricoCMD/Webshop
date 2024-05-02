@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 29. Apr 2024 um 14:11
+-- Erstellungszeit: 02. Mai 2024 um 14:30
 -- Server-Version: 10.4.27-MariaDB
 -- PHP-Version: 8.2.0
 
@@ -62,10 +62,21 @@ CREATE TABLE `produkte` (
   `P_ID` int(11) NOT NULL,
   `P_Name` varchar(50) NOT NULL,
   `P_Beschreibung` varchar(500) NOT NULL,
-  `P_Anzahl` int(11) NOT NULL,
+  `P_Anzahl` text NOT NULL,
   `P_Preis` double NOT NULL,
-  `P_Bewertung` double NOT NULL
+  `P_Bewertung` double NOT NULL,
+  `P_Größe` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_german2_ci;
+
+--
+-- Daten für Tabelle `produkte`
+--
+
+INSERT INTO `produkte` (`P_ID`, `P_Name`, `P_Beschreibung`, `P_Anzahl`, `P_Preis`, `P_Bewertung`, `P_Größe`) VALUES
+(1, 'Jeans Blau', 'Alltagshose, bequemer Schnitt, 100% Baumwolle\r\n', 'Verfügbar', 39.99, 4.3, 'S,M,L,XL'),
+(2, 'T-Shirt Schwarz', 'Basic T-Shirt, für jeden Style, 100% Baumwolle', 'Verfügbar', 10.99, 4.5, 'S,M,L,XL'),
+(3, 'Grauer Pullover', 'Schöner grauer Pullover, Bequemer Schnitt, 100% Baumwolle', 'Verfügbar', 40.99, 4.6, 'S,M,L,XL'),
+(4, 'Weißes T-Shirt', 'Basic T-Shirt, für jeden Style, 100% Baumwolle', 'Verfügbar', 10.99, 4.2, 'S,M,L,XL');
 
 --
 -- Indizes der exportierten Tabellen
@@ -111,7 +122,7 @@ ALTER TABLE `bestellungen`
 -- AUTO_INCREMENT für Tabelle `produkte`
 --
 ALTER TABLE `produkte`
-  MODIFY `P_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `P_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints der exportierten Tabellen
